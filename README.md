@@ -8,4 +8,4 @@ screenshoot:
 
 ![calculator screenshoot](https://github.com/XDKejin/java_files_of_my_study/blob/master/screenshot/calculator.jpg)
 
-this program can run simple calculation 
+this program can run simple calculation. It is complied by javaFX.
