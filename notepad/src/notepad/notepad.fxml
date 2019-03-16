@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notepad.NotepadController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="newF" mnemonicParsing="false" onAction="#newFile" text="New" />
+                  <MenuItem fx:id="openF" mnemonicParsing="false" onAction="#openFile" text="open" />
+                  <MenuItem fx:id="saveF" mnemonicParsing="false" onAction="#saveFile" text="save" />
+                  <RadioMenuItem mnemonicParsing="false" text="showFolder" />
+                  <RadioMenuItem fx:id="isReadOnly" mnemonicParsing="false" onAction="#changeReadWrite" text="read only" />
+              <MenuItem fx:id="closeF" mnemonicParsing="false" onAction="#closeFile" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Exit">
+              <items>
+                <MenuItem fx:id="saveAndExit" mnemonicParsing="false" onAction="#saveAndExit" text="save and exit" />
+                  <MenuItem mnemonicParsing="false" text="exit without save" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="360.0">
+         <children>
+            <ScrollPane fx:id="scrollPane">
+              <content>
+                <AnchorPane prefHeight="174.0" prefWidth="594.0">
+                     <children>
+                        <TextArea fx:id="textArea" prefHeight="353.0" prefWidth="596.0" />
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="210.0" text="fileState" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="15.0" prefWidth="208.0" text="fileInfo" textOverrun="CLIP" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="204.0" text="fileLocation" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

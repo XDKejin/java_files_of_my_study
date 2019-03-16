@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.DialogController">
+   <children>
+      <Button fx:id="dialog" layoutX="191.0" layoutY="138.0" mnemonicParsing="false" onAction="#openDialog" text="testDialog" />
+   </children>
+</AnchorPane>
